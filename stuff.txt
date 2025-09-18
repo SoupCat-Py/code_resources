@@ -1,0 +1,7 @@
+cat - open in terminal
+> - new file and edit
+ls - list (also include params)
+cd - go to dir (also include params and -)
+open - open, duh
+alias
+Touch - create file
