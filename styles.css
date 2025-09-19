@@ -1,0 +1,87 @@
+:root {
+    --bg: #040f16;
+    --text: #d7f9f3;
+    --primary: #81ecd6;
+    --secondary: #1b63b1;
+    --secondary-hover: #0d3259;
+    --secondary-dark: #0a2543;
+    --accent: #4470e2;
+
+    --radius-header: 32px;
+    --radius-medium: 20px;
+    --radius-small: 12px;
+    --radius-xsmall: 8px;
+
+    --size1: 28px;
+    --size2: 18px;
+    --size3: 16px;
+}
+
+html {background: var(--bg); }
+* { font-family: 'Nunito'; }
+
+.row { display: flex; flex-direction: row; }
+.col { display: flex; flex-direction: column; }
+.cntr { align-items: center; justify-content: center; }
+.align-center { width: auto; display: flex; flex-direction: column; align-items: center; }
+
+.rad-solo { border-radius: var(--radius-medium); }
+.rad-left { border-radius: var(--radius-medium) var(--radius-xsmall) var(--radius-xsmall) var(--radius-medium); }
+.rad-cntr { border-radius: var(--radius-xsmall); }
+.rad-right { border-radius: var(--radius-xsmall) var(--radius-medium) var(--radius-medium) var(--radius-xsmall); }
+
+
+header {
+    height: 100px;
+    left:0; right:0;
+    margin: 0; margin-bottom: 48px;
+
+    border-radius: var(--radius-small) var(--radius-small) var(--radius-header) var(--radius-header);
+    background-color: var(--secondary);
+}
+.header-left {
+    align-items: baseline;
+    color: var(--bg);
+    gap: 12px;
+}
+.header-right {
+    position: absolute;
+    right: 52px;
+    gap: 4px;
+
+    font-size: var(--size3);
+    color: var(--bg);
+    text-decoration: none;
+}
+.header-right span { text-decoration: underline; }
+.header-right i { font-size: var(--size2); }
+
+
+
+.seg-button-container {
+    width:fit-content;
+    --pad: 8px;
+    padding: var(--pad);
+    gap: 8px;
+    background-color: var(--secondary-dark);
+    border-radius: calc(var(--radius-medium) + var(--pad));
+}
+.seg-button {
+    height: 40px;
+    width: 120px;
+    font-size: var(--size3);
+    cursor: pointer;
+}
+.seg-button.off {
+    border: solid 4px var(--secondary);
+    background: none;
+    color: var(--secondary);
+    font-weight: normal;
+}
+.seg-button.off:hover { background-color: var(--secondary-hover); }
+.seg-button.on {
+    border: none;
+    background: var(--secondary);
+    color: var(--bg);
+    font-weight: bold;
+}
