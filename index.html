@@ -8,6 +8,13 @@
     <!-- FA CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- PH CDN -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css"
+    />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,18 +39,52 @@
 
     <section class="align-center cntr">
         <div class="seg-button-container cntr row">
-            <button class="seg-button rad-left on" id="seg-button-py">Python</button>
-            <button class="seg-button rad-cntr off" id="seg-button-web">WebDev</button>
-            <button class="seg-button rad-cntr off" id="seg-button-git">Git</button>
-            <button class="seg-button rad-right off" id="seg-button-zsh">Zsh</button>
+
+            <button class="seg-button rad-left cntr row on" id="seg-button-py">
+                <i class="fa-brands fa-python"></i>
+                <span>Python</span>
+            </button>
+
+            <button class="seg-button rad-cntr cntr row off" id="seg-button-web">
+                <i class="ph-bold ph-globe"></i>
+                <span>WebDev</span>
+            </button>
+
+            <button class="seg-button rad-cntr cntr row off" id="seg-button-git">
+                <i class="fa-brands fa-git-alt"></i>
+                <span>Git</span>
+            </button>
+
+            <button class="seg-button rad-right cntr row off" id="seg-button-zsh">
+                <i class="fa-solid fa-terminal"></i>
+                <span>Zsh</span>
+            </button>
+            
         </div>
     </section>
 
 
 
-    <section class="" id="frame-py">
-
+    <section class="shown" id="section-py">
+        <h3>Python</h3>
     </section>
 
+
+    <section class="hidden" id="section-web">
+        <h3>Web Development</h3>
+    </section>
+
+
+    <section class="hidden" id="section-git">
+        <h3>Git Command Line</h3>
+    </section>
+
+
+    <section class="hidden" id="section-zsh">
+        <h3>Z shell</h3>
+    </section>
+
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -2,9 +2,9 @@
     --bg: #040f16;
     --text: #d7f9f3;
     --primary: #81ecd6;
-    --secondary: #1b63b1;
-    --secondary-hover: #0d3259;
-    --secondary-dark: #0a2543;
+    --secondary: #1b6fc9;
+    --secondary-hover: #0f3d6e;
+    --secondary-dark: #0a2b51;
     --accent: #4470e2;
 
     --radius-header: 32px;
@@ -24,6 +24,8 @@ html {background: var(--bg); }
 .col { display: flex; flex-direction: column; }
 .cntr { align-items: center; justify-content: center; }
 .align-center { width: auto; display: flex; flex-direction: column; align-items: center; }
+.hidden { display: none; }
+.shown { display: flex; }
 
 .rad-solo { border-radius: var(--radius-medium); }
 .rad-left { border-radius: var(--radius-medium) var(--radius-xsmall) var(--radius-xsmall) var(--radius-medium); }
@@ -68,20 +70,24 @@ header {
 }
 .seg-button {
     height: 40px;
-    width: 120px;
+    gap: 4px;
     font-size: var(--size3);
     cursor: pointer;
 }
 .seg-button.off {
+    width: 60px;
     border: solid 4px var(--secondary);
     background: none;
     color: var(--secondary);
-    font-weight: normal;
+    font-weight: 500;
 }
 .seg-button.off:hover { background-color: var(--secondary-hover); }
-.seg-button.on {
+.seg-button.on, .seg-button.on:hover {
+    width: 120px;
     border: none;
     background: var(--secondary);
     color: var(--bg);
-    font-weight: bold;
+    font-weight: 800;
 }
+.seg-button.off span { display: none; }
+.seg-button.on span { display: block; }
