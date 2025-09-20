@@ -70,24 +70,43 @@ header {
 }
 .seg-button {
     height: 40px;
-    gap: 4px;
+    position: relative;
     font-size: var(--size3);
     cursor: pointer;
+    overflow: hidden;
+    transition: width 0.2s ease;
 }
 .seg-button.off {
     width: 60px;
-    border: solid 4px var(--secondary);
     background: none;
+    border: solid 4px var(--secondary);
     color: var(--secondary);
-    font-weight: 500;
 }
 .seg-button.off:hover { background-color: var(--secondary-hover); }
 .seg-button.on, .seg-button.on:hover {
     width: 120px;
-    border: none;
     background: var(--secondary);
+    border: none;
     color: var(--bg);
-    font-weight: 800;
 }
-.seg-button.off span { display: none; }
-.seg-button.on span { display: block; }
+.seg-button i {
+    position: absolute;
+    width: 10px;
+    left: 20px;
+}
+.seg-button span {
+    position: absolute;
+    width: 100%;
+    transform: all 0.2s ease;
+}
+.seg-button.off span {
+    opacity: 0;
+    width: 0;
+    transform: scaleX(0);
+}
+.seg-button.on span {
+    opacity: 1;
+    width: 100%;
+    left: 10px;
+    transform: scaleX(1);
+}
