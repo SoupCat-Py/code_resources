@@ -6,7 +6,7 @@ const SEG_BUTTONS = [gebi('seg-button-py'), gebi('seg-button-web'), gebi('seg-bu
 const SECTIONS = [gebi('section-py'), gebi('section-web'), gebi('section-git'), gebi('section-zsh')];
 
 // declare other vars
-let SHOWN_SECTION = gebi('section-py');
+let SHOWN_SECTION = gebi('section-git');
 const SECTION_MAP = new Map([
     [SEG_BUTTONS[0], SECTIONS[0]],
     [SEG_BUTTONS[1], SECTIONS[1]],
@@ -33,6 +33,7 @@ SEG_BUTTONS.forEach((BTN) => {
 
             // show content
             BTN.classList.add('on');
+            SECTION_MAP.get(BTN).classList.remove('hidden');
             SECTION_MAP.get(BTN).classList.add('shown');
 
             // update current section var
