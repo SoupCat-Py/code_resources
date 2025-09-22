@@ -18,7 +18,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -40,7 +40,7 @@
     <section class="align-center cntr">
         <div class="seg-button-container cntr row">
 
-            <button class="seg-button rad-left cntr row on" id="seg-button-py">
+            <button class="seg-button rad-left cntr row off" id="seg-button-py">
                 <i class="fa-brands fa-python"></i>
                 <span>Python</span>
             </button>
@@ -50,7 +50,7 @@
                 <span>WebDev</span>
             </button>
 
-            <button class="seg-button rad-cntr cntr row off" id="seg-button-git">
+            <button class="seg-button rad-cntr cntr row on" id="seg-button-git">
                 <i class="fa-brands fa-git-alt"></i>
                 <span>Git</span>
             </button>
@@ -65,24 +65,105 @@
 
 
 
-    <section class="shown" id="section-py">
+    <main class="align-center">
+    <section class="section-container row hidden" id="section-py">
         <h3>Python</h3>
+        <!-- CustomTkinter
+        Compiling
+        File Management
+        General Tips -->
+
     </section>
 
 
-    <section class="hidden" id="section-web">
+    <section class="section-container col hidden" id="section-web">
         <h3>Web Development</h3>
     </section>
 
 
-    <section class="hidden" id="section-git">
-        <h3>Git Command Line</h3>
+    <section class="section-container col shown" id="section-git">
+
+        <div class="article-group col">
+            <h2>Repo Initialization</h2>
+            <article class="col">
+                <div class="cmd-header">
+                    <i class="ph-bold ph-caret-right cmd-start"></i>
+                    <span class="cmd codefont">git init</span>
+                </div>
+                <span class="cmd-body">
+                    Create an empty local repository in the current directory
+                </span>
+            </article>
+            
+            <article class="col">
+                <div class="cmd-header">
+                    <i class="ph-bold ph-caret-right cmd-start"></i>
+                    <span class="cmd codefont">git clone URL</span>
+                </div>
+                <span class="cmd-body">
+                    Clone a repository from the url onto your machine
+                </span>
+            </article>
+        </div>
+
+        <hr>
+
+        <div class="article-group col">
+            <h2>Staging</h2>
+            <article class="col">
+                <div class="cmd-header">
+                    <i class="ph-bold ph-caret-right cmd-start"></i>
+                    <span class="cmd codefont">git status</span>
+                </div>
+                <span class="cmd-body">
+                    View repo status and show any modified/uploaded files
+                </span>
+            </article>
+            
+            <article class="col">
+                <div class="cmd-header">
+                    <i class="ph-bold ph-caret-right cmd-start"></i>
+                    <span class="cmd codefont">git add FILENAME</span>
+                </div>
+                <span class="cmd-body">
+                    Add file(s) to the repo and update what will be committed
+                </span>
+            </article>
+            
+            <article class="col">
+                <div class="cmd-header">
+                    <i class="ph-bold ph-caret-right cmd-start"></i>
+                    <span class="cmd codefont">git restore FILE</span>
+                </div>
+                <span class="cmd-body">
+                    Discard changes of the file(s) in your current repository
+                </span>
+            </article>
+        </div>
+
+        <hr>
+
+        <div class="article-group col">
+            <h2>Inspect & Compare</h2>
+            <article class="col">
+                <div class="cmd-header">
+                    <i class="ph-bold ph-caret-right cmd-start"></i>
+                    <span class="cmd codefont">git log</span>
+                </div>
+                <span class="cmd-body">
+                    Display commit history for current branch
+                </span>
+            </article>
+        </div>
+
+
     </section>
-
-
-    <section class="hidden" id="section-zsh">
+    
+    
+    <section class="section-container col hidden" id="section-zsh">
         <h3>Z shell</h3>
     </section>
+    </main>
 
 
 <script src="script.js"></script>
