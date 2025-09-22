@@ -7,7 +7,7 @@
     --secondary-dark: #0a2b51;
     --accent: #4470e2;
 
-    --radius-header: 32px;
+    --radius-large: 32px;
     --radius-medium: 20px;
     --radius-small: 12px;
     --radius-xsmall: 8px;
@@ -26,6 +26,7 @@ html {background: var(--bg); }
 .align-center { width: auto; display: flex; flex-direction: column; align-items: center; }
 .hidden { display: none; }
 .shown { display: flex; }
+.codefont { font-family: 'JetBrains Mono'; }
 
 .rad-solo { border-radius: var(--radius-medium); }
 .rad-left { border-radius: var(--radius-medium) var(--radius-xsmall) var(--radius-xsmall) var(--radius-medium); }
@@ -36,9 +37,9 @@ html {background: var(--bg); }
 header {
     height: 100px;
     left:0; right:0;
-    margin: 0; margin-bottom: 48px;
+    margin: 0;
 
-    border-radius: var(--radius-small) var(--radius-small) var(--radius-header) var(--radius-header);
+    border-radius: var(--radius-small) var(--radius-small) var(--radius-large) var(--radius-large);
     background-color: var(--secondary);
 }
 .header-left {
@@ -64,6 +65,7 @@ header {
     width:fit-content;
     --pad: 8px;
     padding: var(--pad);
+    margin-top: 52px; margin-bottom: 24px;
     gap: 8px;
     background-color: var(--secondary-dark);
     border-radius: calc(var(--radius-medium) + var(--pad));
@@ -97,7 +99,7 @@ header {
 .seg-button span {
     position: absolute;
     width: 100%;
-    transform: all 0.2s ease;
+    transform: width 0.2s ease;
 }
 .seg-button.off span {
     opacity: 0;
@@ -109,4 +111,40 @@ header {
     width: 100%;
     left: 10px;
     transform: scaleX(1);
+}
+
+
+.section-container {
+    background: none;
+    border: solid 8px var(--secondary-dark);
+    border-radius: var(--radius-large);
+    padding: 36px;
+}
+.article-group {
+    gap: 40px;
+}
+h2 {
+    color: var(--primary);
+    font-size: var(--size1);
+}
+article {
+    justify-content: left;
+    gap: 16px;
+    color: var(--text);
+}
+.cmd-header {
+    width: fit-content;
+    background: var(--secondary-dark);
+    border-radius: var(--radius-small);
+    padding: 8px; padding-left: 16px; padding-right: 16px;
+    font-size: var(--size2);
+}
+.ph-caret-right { color: var(--secondary); }
+.cmd { color: var(--primary); }
+.cmd-body { margin-left: 16px }
+hr {
+    width: 90%;
+    margin: 36px auto;
+    margin-bottom: 48px;
+    border: dashed 1px var(--secondary-dark);
 }
