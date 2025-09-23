@@ -81,8 +81,8 @@
     </section>
 
 
-    <section class="section-container col shown" id="section-git">
-
+    <section class="section-container cntr row shown" id="section-git">
+        <div class="group-column col">
         <div class="article-group col">
             <h2>Repo Initialization</h2>
             <article class="col">
@@ -91,7 +91,7 @@
                     <span class="cmd codefont">git init</span>
                 </div>
                 <span class="cmd-body">
-                    Create an empty local repository in the current directory
+                    Create an empty local repository in your working directory
                 </span>
             </article>
             
@@ -129,14 +129,123 @@
                     Add file(s) to the repo and update what will be committed
                 </span>
             </article>
+
+            <article class="col">
+                <div class="cmd-header">
+                    <i class="ph-bold ph-caret-right cmd-start"></i>
+                    <span class="cmd codefont">git reset FILENAME</span>
+                </div>
+                <span class="cmd-body">
+                    Unstage files while keeping changes
+                </span>
+            </article>
             
             <article class="col">
                 <div class="cmd-header">
                     <i class="ph-bold ph-caret-right cmd-start"></i>
-                    <span class="cmd codefont">git restore FILE</span>
+                    <span class="cmd codefont">git restore FILENAME</span>
                 </div>
                 <span class="cmd-body">
-                    Discard changes of the file(s) in your current repository
+                    Discard changes of the file(s) in your current repository.<br>
+                    This undoes any changes to said file
+                </span>
+            </article>
+
+            <article class="col">
+                <div class="cmd-header">
+                    <i class="ph-bold ph-caret-right cmd-start"></i>
+                    <span class="cmd codefont">git mv SOURCE DEST</span>
+                </div>
+                <span class="cmd-body">
+                    Move a file and stage the change
+                </span>
+            </article>
+
+            <article class="col">
+                <div class="cmd-header">
+                    <i class="ph-bold ph-caret-right cmd-start"></i>
+                    <span class="cmd codefont">git rm FILENAME</span>
+                </div>
+                <span class="cmd-body">
+                    Delete the file from the repo and stage the removal
+                </span>
+            </article>
+
+            <article class="col">
+                <div class="cmd-header">
+                    <i class="ph-bold ph-caret-right cmd-start"></i>
+                    <span class="cmd codefont">git diff FILE</span>
+                </div>
+                <span class="cmd-body">
+                    Show diff of what is changed but not staged
+                </span>
+            </article>
+
+            <article class="col">
+                <div class="cmd-header">
+                    <i class="ph-bold ph-caret-right cmd-start"></i>
+                    <span class="cmd codefont">git diff --staged</span>
+                </div>
+                <span class="cmd-body">
+                    Show diff of what is staged but not comitted
+                </span>
+            </article>
+
+            <article class="col">
+                <div class="cmd-header">
+                    <i class="ph-bold ph-caret-right cmd-start"></i>
+                    <span class="cmd codefont">git commit -m "MESSAGE"</span>
+                </div>
+                <span class="cmd-body">
+                    Commit all staged files with a message
+                </span>
+            </article>
+        </div>
+        </div>
+
+
+        <div class="col">
+        <div class="article-group col">
+
+            <h2>Branch & Merge</h2>
+            <article class="col">
+                <div class="cmd-header">
+                    <i class="ph-bold ph-caret-right cmd-start"></i>
+                    <span class="cmd codefont">git branch</span>
+                </div>
+                <span class="cmd-body">
+                    List all branches. <br>
+                    A <span class="codefont">*</span> will appear next to the current one
+                </span>
+            </article>
+
+            <article class="col">
+                <div class="cmd-header">
+                    <i class="ph-bold ph-caret-right cmd-start"></i>
+                    <span class="cmd codefont">git branch NAME</span>
+                </div>
+                <span class="cmd-body">
+                    Create a new branch at the current commit
+                </span>
+            </article>
+
+            <article class="col">
+                <div class="cmd-header">
+                    <i class="ph-bold ph-caret-right cmd-start"></i>
+                    <span class="cmd codefont">git checkout</span>
+                </div>
+                <span class="cmd-body">
+                    Switch to a different branch
+                </span>
+            </article>
+
+            <article class="col">
+                <div class="cmd-header">
+                    <i class="ph-bold ph-caret-right cmd-start"></i>
+                    <span class="cmd codefont">git merge BRANCH</span>
+                </div>
+                <span class="cmd-body">
+                    Merge the specified branch's history into the current one
                 </span>
             </article>
         </div>
@@ -144,6 +253,7 @@
         <hr>
 
         <div class="article-group col">
+
             <h2>Inspect & Compare</h2>
             <article class="col">
                 <div class="cmd-header">
@@ -151,9 +261,31 @@
                     <span class="cmd codefont">git log</span>
                 </div>
                 <span class="cmd-body">
-                    Display commit history for current branch
+                    Show commit history for current branch
                 </span>
             </article>
+
+            <article class="col">
+                <div class="cmd-header">
+                    <i class="ph-bold ph-caret-right cmd-start"></i>
+                    <span class="cmd codefont">git log BRANCH1..BRANCH2</span>
+                </div>
+                <span class="cmd-body">
+                    Show commits in branch2 that are not in branch1
+                </span>
+            </article>
+
+            <article class="col">
+                <div class="cmd-header">
+                    <i class="ph-bold ph-caret-right cmd-start"></i>
+                    <span class="cmd codefont">git diff BRANCH1..BRANCH2</span>
+                </div>
+                <span class="cmd-body">
+                    Show diff in branch2 that are is in branch1
+                </span>
+            </article>
+
+        </div>
         </div>
 
 
