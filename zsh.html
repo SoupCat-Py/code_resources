@@ -1,9 +1,9 @@
 <section class="col">
 
 
-    <section class="article-group">
+    <section class="article-group col">
 
-        <h2>File Management</h2>
+        <h2>Nav/Display</h2>
 
         <article class="col">
             <div class="cmd-header">
@@ -13,10 +13,71 @@
             <span class="cmd-body">
                 Move to a directory<br>
                 The current dir is your "working directory"<br>
-                The path to said dir can be absolute or relative
+                The path to DIR can be absolute or relative
             </span>
         </article>
 
+        <article class="col">
+            <div class="cmd-header">
+                <i class="ph-bold ph-caret-right cmd-start"></i>
+                <span class="cmd codefont">ls DIR</span>
+            </div>
+            <span class="cmd-body">
+                Show contents a directory<br>
+                Leave DIR blank to list the working dir
+            </span>
+        </article>
+
+        <article class="col">
+            <div class="cmd-header">
+                <i class="ph-bold ph-caret-right cmd-start"></i>
+                <span class="cmd codefont">cat FILE</span>
+            </div>
+            <span class="cmd-body">
+                Print out contents of FILE
+            </span>
+        </article>
+
+        <article class="col">
+            <div class="cmd-header">
+                <i class="ph-bold ph-caret-right cmd-start"></i>
+                <span class="cmd codefont">head -n NUM FILE</span>
+            </div>
+            <span class="cmd-body">
+                Print out the first NUM lines of FILE
+            </span>
+        </article>
+
+        <article class="col">
+            <div class="cmd-header">
+                <i class="ph-bold ph-caret-right cmd-start"></i>
+                <span class="cmd codefont">tail -n NUM FILE</span>
+            </div>
+            <span class="cmd-body">
+                Print out the last NUM lines of FILE
+            </span>
+        </article>
+
+        <article class="col">
+            <div class="cmd-header">
+                <i class="ph-bold ph-caret-right cmd-start"></i>
+                <span class="cmd codefont">wc FILE</span>
+            </div>
+            <span class="cmd-body">
+                Show word and character count of FILE
+            </span>
+        </article>
+        
+    </section>
+
+
+    <hr></hr>
+    
+    
+    <section class="article-group col">
+        
+        <h2>Dir/File Creation</h2>
+        
         <article class="col">
             <div class="cmd-header">
                 <i class="ph-bold ph-caret-right cmd-start"></i>
@@ -26,34 +87,57 @@
                 Create an empty directory within your working dir
             </span>
         </article>
-
+        
         <article class="col">
             <div class="cmd-header">
                 <i class="ph-bold ph-caret-right cmd-start"></i>
-                <span class="cmd codefont">touch FILE</span>
+                <span class="cmd codefont">touch NAME</span>
             </div>
             <span class="cmd-body">
                 Create a file (remember to include the extension)
             </span>
         </article>
-
+        
         <article class="col">
             <div class="cmd-header">
                 <i class="ph-bold ph-caret-right cmd-start"></i>
-                <span class="cmd codefont">> FILE</span>
+                <span class="cmd codefont">> NAME</span>
             </div>
             <span class="cmd-body">
-                Create and edit a file
+                Create and edit a file (remember to include the extension)
             </span>
         </article>
-
+        
+    </section>
+    
+    
+    <!------------ END OF COLUMN 1 ------------>
+</section>
+<section class="col">
+    
+    
+    <section class="article-group col">
+        
+        <h2>Move, Copy, Delete</h2>
+        
         <article class="col">
             <div class="cmd-header">
                 <i class="ph-bold ph-caret-right cmd-start"></i>
                 <span class="cmd codefont">mv FILE DESTINATION</span>
             </div>
             <span class="cmd-body">
-                Move a file
+                Move FILE to a new dir<br>
+                Omit DESTINATION to rename FILE
+            </span>
+        </article>
+        
+        <article class="col">
+            <div class="cmd-header">
+                <i class="ph-bold ph-caret-right cmd-start"></i>
+                <span class="cmd codefont">cp FILE DESTINATION</span>
+            </div>
+            <span class="cmd-body">
+                Copy FILE to a new directory<br>
             </span>
         </article>
 
@@ -63,9 +147,31 @@
                 <span class="cmd codefont">rm [-rf] FILE</span>
             </div>
             <span class="cmd-body">
-                Delete a file. This bypasses the trash<br>
-                Use the -r parameter to delete a dir and all its contents<br>
-                Use the -f parameter to force
+                Delete FILE. This bypasses the trash<br>
+                Use the <span class="codefont">-r</span> param to delete a dir and all its contents<br>
+                Use the <span class="codefont">-f</span> param to force
+            </span>
+        </article>
+        
+    </section>
+
+
+    <hr></hr>
+
+
+    <section class="article-group col">
+
+        <h2>Nice stuff</h2>
+
+        <article class="col">
+            <div class="cmd-header">
+                <i class="ph-bold ph-caret-right cmd-start"></i>
+                <span class="cmd codefont">man COMMAND</span>
+            </div>
+            <span class="cmd-body">
+                Show manual for a specified command<br>
+                This is handy for parameters and stuff<br>
+                (ie: ls, touch, rm)
             </span>
         </article>
 
