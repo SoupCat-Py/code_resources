@@ -6,5 +6,5 @@ open - open, duh
 alias
 Touch - create file
 
-https://gist.github.com/subfuzion/db7f57fff2fb6998a16c
-https://typescale.com/
+git: https://gist.github.com/subfuzion/db7f57fff2fb6998a16c
+web: https://typescale.com/
