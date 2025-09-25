@@ -138,11 +138,12 @@
         <article class="col">
             <div class="cmd-header">
                 <i class="ph-bold ph-caret-right cmd-start"></i>
-                <span class="cmd codefont">mv FILE DESTINATION</span>
+                <span class="cmd codefont">mv [-r] FILE DESTINATION</span>
             </div>
             <span class="cmd-body">
                 Move FILE to a new dir<br>
-                Use the same dir in FILE and DESTINATION to rename<br><br>
+                Use the same dir in FILE and DESTINATION to rename<br>
+                <span class="codefont">-r</span> copy recursively (for dirs)<br><br>
                 Examples:<br>
                 <span class="codefont">mv ~/file.txt ~/dir/file.txt</span> move<br>
                 <span class="codefont">mv ~/file.txt ~/file2.txt</span> rename
@@ -152,10 +153,11 @@
         <article class="col">
             <div class="cmd-header">
                 <i class="ph-bold ph-caret-right cmd-start"></i>
-                <span class="cmd codefont">cp FILE DESTINATION</span>
+                <span class="cmd codefont">cp [-r]FILE DESTINATION</span>
             </div>
             <span class="cmd-body">
                 Copy FILE to a new directory<br>
+                <span class="codefont">-r</span> copy recursively (for dirs)
             </span>
         </article>
 
@@ -166,7 +168,7 @@
             </div>
             <span class="cmd-body">
                 Delete FILE. This bypasses the trash<br>
-                <span class="codefont">-r</span> delete a dir and its contents<br>
+                <span class="codefont">-r</span> delete recursively (for dirs)
                 <span class="codefont">-f</span> force deletion<br>
                 <span class="codefont">-v</span> print files as they are deleted
             </span>
