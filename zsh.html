@@ -3,8 +3,8 @@
 
     <section class="article-group col">
 
-        <h2>Nav/Display</h2>
-
+        <h2>Navigate & Display</h2>
+        
         <article class="col">
             <div class="cmd-header">
                 <i class="ph-bold ph-caret-right cmd-start"></i>
@@ -15,6 +15,16 @@
                 The current dir is your "working directory"<br>
                 The path to DIR can be absolute or relative<br>
                 Use <span class="codefont">-</span> to go back
+            </span>
+        </article>
+        
+        <article class="col">
+            <div class="cmd-header">
+                <i class="ph-bold ph-caret-right cmd-start"></i>
+                <span class="cmd codefont">pwd</span>
+            </div>
+            <span class="cmd-body">
+                Print the working dir
             </span>
         </article>
 
@@ -42,20 +52,24 @@
         <article class="col">
             <div class="cmd-header">
                 <i class="ph-bold ph-caret-right cmd-start"></i>
-                <span class="cmd codefont">head -n NUM FILE</span>
+                <span class="cmd codefont">head [-n] [-c] NUM FILE</span>
             </div>
             <span class="cmd-body">
-                Print out the first NUM lines of FILE
+                Print out the first NUM lines or bytes of FILE<br>
+                <span class="codefont">-n</span> NUM of lines<br>
+                <span class="codefont">-c</span> NUM bytes
             </span>
         </article>
 
         <article class="col">
             <div class="cmd-header">
                 <i class="ph-bold ph-caret-right cmd-start"></i>
-                <span class="cmd codefont">tail -n NUM FILE</span>
+                <span class="cmd codefont">tail [-n] [-c] NUM FILE</span>
             </div>
             <span class="cmd-body">
-                Print out the last NUM lines of FILE
+                Print out the last NUM lines or bytes of FILE<br>
+                <span class="codefont">-n</span> NUM of lines<br>
+                <span class="codefont">-c</span> NUM bytes
             </span>
         </article>
 
@@ -109,16 +123,6 @@
             </span>
         </article>
         
-        <article class="col">
-            <div class="cmd-header">
-                <i class="ph-bold ph-caret-right cmd-start"></i>
-                <span class="cmd codefont">> NAME</span>
-            </div>
-            <span class="cmd-body">
-                Create and edit a file (remember to include the extension)
-            </span>
-        </article>
-        
     </section>
     
     
@@ -138,7 +142,10 @@
             </div>
             <span class="cmd-body">
                 Move FILE to a new dir<br>
-                Omit DESTINATION to rename FILE
+                Use the same dir in FILE and DESTINATION to rename<br><br>
+                Examples:<br>
+                <span class="codefont">mv ~/file.txt ~/dir/file.txt</span> move<br>
+                <span class="codefont">mv ~/file.txt ~/file2.txt</span> rename
             </span>
         </article>
         
@@ -155,12 +162,13 @@
         <article class="col">
             <div class="cmd-header">
                 <i class="ph-bold ph-caret-right cmd-start"></i>
-                <span class="cmd codefont">rm [-rf] FILE</span>
+                <span class="cmd codefont">rm [-rfv] FILE</span>
             </div>
             <span class="cmd-body">
                 Delete FILE. This bypasses the trash<br>
-                Use the <span class="codefont">-r</span> param to delete a dir and all its contents<br>
-                Use the <span class="codefont">-f</span> param to force
+                <span class="codefont">-r</span> delete a dir and its contents<br>
+                <span class="codefont">-f</span> force deletion<br>
+                <span class="codefont">-v</span> print files as they are deleted
             </span>
         </article>
         
@@ -168,6 +176,37 @@
 
 
     <hr>
+
+
+    <section class="article-group col">
+
+        <h2>Combining Commands</h2>
+
+        <article class="col">
+            <div class="cmd-header">
+                <i class="ph-bold ph-caret-right cmd-start"></i>
+                <span class="cmd codefont">COMMAND > FILE</span>
+            </div>
+            <span class="cmd-body">
+                Redirect output of COMMAND into FILE<br>
+                Use <span class="codefont">>></span> to append isntead of overwriting<br>
+                Example: <span class="codefont">echo "hello" > file2.txt</span>
+            </span>
+        </article>
+
+        <article class="col">
+            <div class="cmd-header">
+                <i class="ph-bold ph-caret-right cmd-start"></i>
+                <span class="cmd codefont">COMMAND_1 | COMMAND_2</span>
+            </div>
+            <span class="cmd-body">
+                Pipe the output of COMMAND_1 into COMMAND_2<br>
+                Basically run COMMAND_2 with COMMAND_1 as an input<br>
+                Example: <span class="codefont">head -n 5 file.txt | tail -n 2</span>
+            </span>
+        </article>
+
+    </section>
 
 
     <section class="article-group col">
@@ -196,7 +235,19 @@
                 ALIAS is the new name, COMMAND may have parameters<br>
                 I recommend running <span class="codefont">open ~/.zshrc</span> and adding this to the end of the file<br><br>
 
-                Examples: <span class="codefont">alias py=python3</span> <span class="codefont">alias ls="ls -CF"</span>
+                Examples:<br>
+                <span class="codefont">alias py=python3</span> no params<br>
+                <span class="codefont">alias ls="ls -ACFlh"</span> include params
+            </span>
+        </article>
+
+        <article class="col">
+            <div class="cmd-header">
+                <i class="ph-bold ph-caret-right cmd-start"></i>
+                <span class="cmd codefont">history</span>
+            </div>
+            <span class="cmd-body">
+                Print out previous commands
             </span>
         </article>
 
