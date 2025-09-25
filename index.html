@@ -50,12 +50,12 @@
                 <span>WebDev</span>
             </button>
 
-            <button class="seg-button rad-cntr cntr row on" id="seg-button-git">
+            <button class="seg-button rad-cntr cntr row of" id="seg-button-git">
                 <i class="fa-brands fa-git-alt"></i>
                 <span>Git</span>
             </button>
 
-            <button class="seg-button rad-right cntr row off" id="seg-button-zsh">
+            <button class="seg-button rad-right cntr row on" id="seg-button-zsh">
                 <i class="fa-solid fa-terminal"></i>
                 <span>Zsh</span>
             </button>
@@ -81,7 +81,7 @@
     </section>
 
 
-    <section class="section-container cntr row shown" id="section-git">
+    <section class="section-container cntr row hidden" id="section-git">
         <script>
             fetch("git.html")
                 .then(res => res.text())
@@ -90,7 +90,7 @@
     </section>
     
     
-    <section class="section-container row hidden" id="section-zsh">
+    <section class="section-container row shown" id="section-zsh">
         <script>
             fetch("zsh.html")
                 .then(res => res.text())
