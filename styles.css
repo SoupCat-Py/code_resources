@@ -26,7 +26,12 @@ html {background: var(--bg); }
 .align-center { width: auto; display: flex; flex-direction: column; align-items: center; }
 .hidden { display: none; }
 .shown { display: flex; }
-.codefont { font-family: 'JetBrains Mono'; }
+.codefont {
+    font-family: 'JetBrains Mono';
+    background-color: var(--secondary-dark);
+    padding-left: 2px; padding-right: 2px;
+    border-radius: var(--radius-xsmall); 
+}
 
 .rad-solo { border-radius: var(--radius-medium); }
 .rad-left { border-radius: var(--radius-medium) var(--radius-xsmall) var(--radius-xsmall) var(--radius-medium); }
