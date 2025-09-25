@@ -8,12 +8,13 @@
         <article class="col">
             <div class="cmd-header">
                 <i class="ph-bold ph-caret-right cmd-start"></i>
-                <span class="cmd codefont">cd DIR</span>
+                <span class="cmd codefont">cd DIR [-]</span>
             </div>
             <span class="cmd-body">
                 Move to a directory<br>
                 The current dir is your "working directory"<br>
-                The path to DIR can be absolute or relative
+                The path to DIR can be absolute or relative<br>
+                Use <span class="codefont">-</span> to go back
             </span>
         </article>
 
@@ -61,6 +62,16 @@
         <article class="col">
             <div class="cmd-header">
                 <i class="ph-bold ph-caret-right cmd-start"></i>
+                <span class="cmd codefont">open FILE</span>
+            </div>
+            <span class="cmd-body">
+                Open the file, simple enough
+            </span>
+        </article>
+
+        <article class="col">
+            <div class="cmd-header">
+                <i class="ph-bold ph-caret-right cmd-start"></i>
                 <span class="cmd codefont">wc FILE</span>
             </div>
             <span class="cmd-body">
@@ -71,7 +82,7 @@
     </section>
 
 
-    <hr></hr>
+    <hr>
     
     
     <section class="article-group col">
@@ -156,7 +167,7 @@
     </section>
 
 
-    <hr></hr>
+    <hr>
 
 
     <section class="article-group col">
@@ -175,7 +186,53 @@
             </span>
         </article>
 
+        <article class="col">
+            <div class="cmd-header">
+                <i class="ph-bold ph-caret-right cmd-start"></i>
+                <span class="cmd codefont">alias ALIAS="COMMAND"</span>
+            </div>
+            <span class="cmd-body">
+                Give an alias to a command<br>
+                ALIAS is the new name, COMMAND may have parameters<br>
+                I recommend running <span class="codefont">open ~/.zshrc</span> and adding this to the end of the file<br><br>
+
+                Examples: <span class="codefont">alias py=python3</span> <span class="codefont">alias ls="ls -CF"</span>
+            </span>
+        </article>
+
+        <article class="col">
+            <div class="cmd-header">
+                <i class="ph-bold ph-caret-right cmd-start"></i>
+                <span class="cmd codefont">sudo powermetrics</span>
+            </div>
+            <span class="cmd-body">
+                Show metrics such as CPU temp, as well as processes<br>
+                You must have admin privileges and enter your password
+            </span>
+        </article>
+        
+    </section>
+    
+    
+    <hr>
+    
+    
+    <section class="article-group col">
+        
+        <h2>Useful Links</h2>
+        <span>
+            <a class="link" target="_blank" href="https://www.datacamp.com/cheat-sheet/bash-and-zsh-shell-terminal-basics-cheat-sheet">
+                Bigger zsh cheat sheet
+            </a><br>
+            <a class="link" target="_blank" href="https://en.wikipedia.org/wiki/ANSI_escape_code">
+                ANSI escape codes
+            </a><br>
+            <a class="link" target="_blank" href="https://stackoverflow.com/questions/4842424/list-of-ansi-color-escape-sequences">
+                ANSI color sequences
+            </a>
+        </span>
+
     </section>
 
-
+<!------------ END OF COLUMN 2 ------------>
 </section>
