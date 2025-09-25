@@ -91,7 +91,11 @@
     
     
     <section class="section-container row hidden" id="section-zsh">
-        <h3>Z shell</h3>
+        <script>
+            fetch("zsh.html")
+                .then(res => res.text())
+                .then(html => { document.getElementById("section-zsh").innerHTML = html; });
+        </script>
     </section>
     </main>
 
