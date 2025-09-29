@@ -17,9 +17,24 @@
     --size3: 16px;
 }
 
+/* whole document */
 html {background: var(--bg); }
 * { font-family: 'Nunito'; }
 
+/* scrollbar */
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-hover);
+    border-radius: var(--radius-xsmall);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--secondary);
+}
+
+/* styling classes */
 .row { display: flex; flex-direction: row; }
 .col { display: flex; flex-direction: column; }
 .cntr { align-items: center; justify-content: center; }
@@ -36,6 +51,7 @@ code {
     border-radius: var(--radius-xsmall); 
 }
 
+/* radii */
 .rad-solo { border-radius: var(--radius-medium); }
 .rad-left { border-radius: var(--radius-medium) var(--radius-xsmall) var(--radius-xsmall) var(--radius-medium); }
 .rad-cntr { border-radius: var(--radius-xsmall); }
