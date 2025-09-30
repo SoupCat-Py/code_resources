@@ -70,11 +70,7 @@ header {
     border-radius: var(--radius-small) var(--radius-small) var(--radius-large) var(--radius-large);
     background-color: var(--secondary);
 }
-.header-left {
-    align-items: baseline;
-    color: var(--bg);
-    gap: 12px;
-}
+h1 {color: var(--bg); }
 .header-right {
     position: absolute;
     right: 52px;
@@ -207,4 +203,20 @@ th {
 th, td {
     padding: 4px; padding-left: 8px; padding-right: 8px;
     border: 1px solid var(--secondary-dark);
+}
+
+
+
+@media (max-width: 990px) {
+    header {
+        flex-direction: column;
+    }
+    .header-right {
+        position: relative;
+        right: 0;
+        margin-bottom: 24px;
+    }
+    .section-container {
+        flex-direction: column;
+    }
 }
