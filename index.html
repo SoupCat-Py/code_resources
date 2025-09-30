@@ -40,7 +40,7 @@
     <section class="align-center cntr">
         <div class="seg-button-container cntr row">
 
-            <button class="seg-button rad-left cntr row off" id="seg-button-zsh">
+            <button class="seg-button rad-left cntr row on" id="seg-button-zsh">
                 <i class="fa-solid fa-terminal"></i>
                 <span>Zsh</span>
             </button>
@@ -50,7 +50,7 @@
                 <span>Git</span>
             </button>
             
-            <button class="seg-button rad-cntr cntr row on" id="seg-button-web">
+            <button class="seg-button rad-cntr cntr row off" id="seg-button-web">
                 <i class="ph-bold ph-globe"></i>
                 <span>WebDev</span>
             </button>
@@ -75,7 +75,7 @@
     </section>
 
 
-    <section class="section-container row shown" id="section-web">
+    <section class="section-container row hidden" id="section-web">
         <script>
             fetch("web.html")
                 .then(res => res.text())
@@ -93,7 +93,7 @@
     </section>
     
     
-    <section class="section-container row hidden" id="section-zsh">
+    <section class="section-container row shown" id="section-zsh">
         <script>
             fetch("zsh.html")
                 .then(res => res.text())
