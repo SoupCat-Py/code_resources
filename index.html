@@ -50,12 +50,12 @@
                 <span>Git</span>
             </button>
             
-            <button class="seg-button rad-cntr cntr row off" id="seg-button-web">
+            <button class="seg-button rad-cntr cntr row on" id="seg-button-web">
                 <i class="ph-bold ph-globe"></i>
                 <span>WebDev</span>
             </button>
             
-            <button class="seg-button rad-right cntr row on" id="seg-button-py">
+            <button class="seg-button rad-right cntr row off" id="seg-button-py">
                 <i class="fa-brands fa-python"></i>
                 <span>Python</span>
             </button>
@@ -66,22 +66,21 @@
 
 
     <main class="align-center">
-    <section class="section-container row shown" id="section-py">
+    <section class="section-container row hidden" id="section-py">
         <script>
             fetch("py.html")
                 .then(res => res.text())
                 .then(html => { document.getElementById("section-py").innerHTML = html; });
         </script>
-        <!-- CustomTkinter
-        Compiling
-        File Management
-        General Tips -->
-
     </section>
 
 
-    <section class="section-container col hidden" id="section-web">
-        <h3>Web Development</h3>
+    <section class="section-container row shown" id="section-web">
+        <script>
+            fetch("web.html")
+                .then(res => res.text())
+                .then(html => { document.getElementById("section-web").innerHTML = html; });
+        </script>
     </section>
 
 

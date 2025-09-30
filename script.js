@@ -6,7 +6,7 @@ const SEG_BUTTONS = [gebi('seg-button-py'), gebi('seg-button-web'), gebi('seg-bu
 const SECTIONS = [gebi('section-py'), gebi('section-web'), gebi('section-git'), gebi('section-zsh')];
 
 // declare other vars
-let SHOWN_SECTION = gebi('section-py');
+let SHOWN_SECTION = gebi('section-web');
 const SECTION_MAP = new Map([
     [SEG_BUTTONS[0], SECTIONS[0]],
     [SEG_BUTTONS[1], SECTIONS[1]],
