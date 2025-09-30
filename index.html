@@ -40,24 +40,24 @@
     <section class="align-center cntr">
         <div class="seg-button-container cntr row">
 
-            <button class="seg-button rad-left cntr row off" id="seg-button-py">
-                <i class="fa-brands fa-python"></i>
-                <span>Python</span>
+            <button class="seg-button rad-left cntr row off" id="seg-button-zsh">
+                <i class="fa-solid fa-terminal"></i>
+                <span>Zsh</span>
             </button>
-
-            <button class="seg-button rad-cntr cntr row off" id="seg-button-web">
-                <i class="ph-bold ph-globe"></i>
-                <span>WebDev</span>
-            </button>
-
+            
             <button class="seg-button rad-cntr cntr row off" id="seg-button-git">
                 <i class="fa-brands fa-git-alt"></i>
                 <span>Git</span>
             </button>
-
-            <button class="seg-button rad-right cntr row on" id="seg-button-zsh">
-                <i class="fa-solid fa-terminal"></i>
-                <span>Zsh</span>
+            
+            <button class="seg-button rad-cntr cntr row off" id="seg-button-web">
+                <i class="ph-bold ph-globe"></i>
+                <span>WebDev</span>
+            </button>
+            
+            <button class="seg-button rad-right cntr row on" id="seg-button-py">
+                <i class="fa-brands fa-python"></i>
+                <span>Python</span>
             </button>
             
         </div>
@@ -66,8 +66,12 @@
 
 
     <main class="align-center">
-    <section class="section-container row hidden" id="section-py">
-        <h3>Python</h3>
+    <section class="section-container row shown" id="section-py">
+        <script>
+            fetch("py.html")
+                .then(res => res.text())
+                .then(html => { document.getElementById("section-py").innerHTML = html; });
+        </script>
         <!-- CustomTkinter
         Compiling
         File Management
@@ -90,7 +94,7 @@
     </section>
     
     
-    <section class="section-container row shown" id="section-zsh">
+    <section class="section-container row hidden" id="section-zsh">
         <script>
             fetch("zsh.html")
                 .then(res => res.text())
@@ -100,6 +104,7 @@
     </main>
 
 
+<!-- i cant believe i forgot to do this at the start -->
 <script src="script.js"></script>
 </body>
 </html>

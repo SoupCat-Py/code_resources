@@ -1,0 +1,141 @@
+<section class="col">
+
+
+    <section class="article-group wider col">
+
+        <h2>CustomTkinter</h2>
+
+        <article class="col">
+            <div class="image-cap col">
+                <img src="images/customtkinter.png" alt="customtkinter">
+                <div class="row link-row">
+                    <a target="_blank" href="https://customtkinter.tomschimansky.com/documentation/">CTK documentation</a>
+                    •
+                    <a target="_blank" href="https://github.com/TomSchimansky/CustomTkinter">CTK repo</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="cntr col">
+            <div class="image-cap col">
+                <img src="images/pywinstyles.jpg" alt="python window styles">
+                <a target="_blank" href="https://github.com/Akascape/py-window-styles?tab=readme-ov-file">Py Window Styles</a>
+            </div>
+            <span class="cmd-body">
+                <strong>NOTE</strong>: This only works on Windows<br>
+                I have yet to find an alternative for macOS or Linux
+            </span>
+        </article>
+
+        <article class="col">
+            <div class="image-cap col">
+                <img src="images/ctkmessagebox.png" alt="customtkinter message box">
+                <a target="_blank" href="https://github.com/Akascape/CTkMessagebox">CTK message boxes</a>
+            </div>
+        </article>
+
+        <article>
+            <span class="cmd-body">CTK input validation:</span>
+            <table>
+                <tr><th>Code</th> <th>Description</th></tr>
+                <tr><td><code>%d</code></td> <td>Type of action (<code>0</code> = deletion, <code>1</code> = insertion, <code>-1</code> = other)</td></tr>
+                <tr><td><code>%i</code></td> <td>Index of cursor position where change is happening</td></tr>
+                <tr><td><code>%P</code></td> <td>Value of the entry <em>after</em> the change is done</td></tr>
+                <tr><td><code>%s</code></td> <td>Value of the entry <em>before</em> the change happens</td></tr>
+                <tr><td><code>%S</code></td> <td>String that is being inserted/deleted</td></tr>
+                <tr><td><code>%v</code></td> <td>Current validation mode (<code>'key'</code> <code>'focusin'</code> <code>'focusout'</code> <code>'forced'</code>)</td></tr>
+                <tr><td><code>%V</code></td> <td>Validation mode that triggered the callback<br>(same as <code>%v</code> but evaluated inside the function)</td></tr>
+                <tr><td><code>%w</code></td> <td>Full widget name (ie: <code>.!ctkentry2.!entry</code>)</td></tr>
+            </table>
+        </article>
+
+    </section>
+
+
+<!------------ END OF COLUMN 1 ------------>
+</section>
+<section class="col">
+
+
+    <section class="article-group col">
+
+        <h2>File Management</h2>
+
+        <article class="col">
+            <h3>Opening files</h3>
+            <table>
+                <tr><th>Mode</th> <th>Description</th></tr>
+                <tr><td><code>r</code></td> <td>read</td></tr>
+                <tr><td><code>w</code></td> <td>write</td></tr>
+                <tr><td><code>a</code></td> <td>append</td></tr>
+                <tr><td><code>x</code></td> <td>create</td></tr>
+                <tr><td><code>rt</code></td> <td>write (must exist)</td></tr>
+            </table>
+            <span class="cmd-body">*Remember to use <code>file.close()</code> if you do not use <code>with</code></span>
+        </article>
+
+    </section>
+
+
+    <hr>
+
+
+    <section class="article-group col">
+
+        <h2>Compiling</h2>
+
+        <article class="col">
+            <div class="cmd-header">
+                <i class="ph-bold ph-caret-right cmd-start"></i>
+                <span class="cmd codefont">python3 -m pyinstaller<br>--onedir --onefile --clean --windowed --strip<br>--add-data "SOURCE:DEST" --icon-ICON_PATH PY_PATH</span>
+            </div>
+            <span class="cmd-body">
+                Build a <code>.py</code> file into an app<br>
+                This works with <code>.exe</code> (windows) and <code>.app</code> (macOS)<br>
+                <strong>NOTE</strong>: <code>--windowed</code> tells the terminal that this is a GUI app
+            </span>
+        </article>
+
+        <article class="col">
+            <div class="cmd-header">
+                <i class="ph-bold ph-caret-right cmd-start"></i>
+                <span class="cmd codefont">codesign --deep --force --sign<br>"CERT" APP_PATH</span>
+            </div>
+            <span class="cmd-body">
+                Re-sign a <code>.app</code><br>
+                Before running this, you need to make a certificate using <strong>Keychain Access</strong><br>
+                You'd want to do this after editing <code>info.plist</code>
+            </span>
+        </article>
+
+    </section>
+
+
+    <hr>
+
+
+    <section class="article-group col">
+
+        <h2>Other Stuff</h2>
+
+        <article class="col">
+            <img src="images/suppress.png" alt="contextlib.suppress">
+            <span class="cmd-body">
+                When it throws an error but that's supposed to happen
+            </span>
+        </article>
+
+        <article class="cntr col">
+            <div class="image-cap col">
+                <img src="images/colorist.png" alt="python window styles">
+                <a target="_blank" href="https://jakob-bagterp.github.io/colorist-for-python/">Colorist for python</a>
+            </div>
+            <span class="cmd-body">
+                This module helps with ANSI escape codes in python
+            </span>
+        </article>
+
+    </section>
+
+
+</section>
